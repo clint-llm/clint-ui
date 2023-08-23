@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      @apply text-gray-900;
+    }
+    h1 {
+      @apply text-3xl;
+      @apply font-light;
+      @apply leading-none;
+      @apply mt-6;
+      @apply mb-4;
+    }
+    h2 {
+      @apply text-2xl;
+      @apply font-light;
+      @apply leading-none;
+      @apply mt-6;
+      @apply mb-4;
+    }
+    h3 {
+      @apply text-xl;
+      @apply font-light;
+      @apply leading-none;
+      @apply mt-6;
+      @apply mb-4;
+    }
+    h4 {
+      @apply text-lg;
+      @apply font-light;
+      @apply leading-none;
+      @apply mt-6;
+      @apply mb-4;
+    }
+    h5 {
+      @apply font-bold;
+      @apply leading-none;
+      @apply mt-6;
+      @apply mb-4;
+    }
+    h6 {
+      @apply font-semibold;
+      @apply leading-none;
+      @apply mt-6;
+      @apply mb-4;
+    }
+    p, ul, ol {
+      @apply my-2;
+    }
+    ul {
+      @apply list-disc;
+      @apply list-inside;
+    }
+    ol {
+      @apply list-decimal;
+      @apply list-inside;
+    }
+    a {
+      @apply font-medium text-indigo-600
+    }
+    .contain-my h1:first-child,
+    .contain-my h2:first-child,
+    .contain-my h3:first-child,
+    .contain-my h4:first-child,
+    .contain-my h5:first-child,
+    .contain-my h6:first-child,
+    .contain-my p:first-child {
+      @apply mt-0;
+    }
+    .contain-my h1:last-child,
+    .contain-my h2:last-child,
+    .contain-my h3:last-child,
+    .contain-my h4:last-child,
+    .contain-my h5:last-child,
+    .contain-my h6:last-child,
+    .contain-my p:last-child {
+      @apply mb-0;
+    }
+  }
