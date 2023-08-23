@@ -231,10 +231,17 @@ function App() {
     addAlert(
       <>
         Every message you send makes requests to ChatGPT using your OpenAI
-        account, transmitting several thousand tokens to{" "}
-        <code>gpt-3.5-turbo-16k</code> which are billed according to{" "}
-        <a href="https://openai.com/pricing">OpenAI's Pricing</a>. Each message
-        could cost you a few cents. The message contents are subject to{" "}
+        account. Several thousand tokens to are transmitted to{" "}
+        <code>gpt-3.5-turbo-16k</code>. Your OpenAI account is billed according
+        to <a href="https://openai.com/pricing">OpenAI's Pricing</a>, and each
+        message can cost you a few cents.
+      </>,
+      "Warning",
+    );
+    // And always show the privacy warning
+    addAlert(
+      <>
+        The contents the message are sent to OpenAI and subject to{" "}
         <a href="https://openai.com/policies/privacy-policy">
           OpenAI's Privacy Policy
         </a>
