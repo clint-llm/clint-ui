@@ -1,6 +1,7 @@
 import * as Clint from "../../clint-lib/pkg";
 
 export async function buildDocDb() {
+  const version = "v2";
   const [
     embeddings,
     embeddingsPcaMapping,
@@ -12,32 +13,32 @@ export async function buildDocDb() {
     isCondition,
     isSymptoms,
   ] = await Promise.all([
-    fetch("/db/embeddings_pca_128.npy", { cache: "force-cache" }).then((x) =>
-      x.arrayBuffer(),
-    ),
-    fetch("/db/embeddings_pca_128_mapping.npy", { cache: "force-cache" }).then(
+    fetch(`/db/embeddings_pca_128.${version}.npy`, {
+      cache: "force-cache",
+    }).then((x) => x.arrayBuffer()),
+    fetch(`/db/embeddings_pca_128_mapping.${version}.npy`, {
+      cache: "force-cache",
+    }).then((x) => x.arrayBuffer()),
+    fetch(`/db/embeddings_hash.${version}.csv`, { cache: "force-cache" }).then(
       (x) => x.arrayBuffer(),
     ),
-    fetch("/db/embeddings_hash.csv", { cache: "force-cache" }).then((x) =>
+    fetch(`/db/parents.${version}.csv`, { cache: "force-cache" }).then((x) =>
       x.arrayBuffer(),
     ),
-    fetch("/db/parents.csv", { cache: "force-cache" }).then((x) =>
+    fetch(`/db/titles.${version}.csv`, { cache: "force-cache" }).then((x) =>
       x.arrayBuffer(),
     ),
-    fetch("/db/titles.csv", { cache: "force-cache" }).then((x) =>
+    fetch(`/db/urls.${version}.csv`, { cache: "force-cache" }).then((x) =>
       x.arrayBuffer(),
     ),
-    fetch("/db/urls.csv", { cache: "force-cache" }).then((x) =>
-      x.arrayBuffer(),
+    fetch(`/db/is_introduction.${version}.csv`, { cache: "force-cache" }).then(
+      (x) => x.arrayBuffer(),
     ),
-    fetch("/db/is_introduction.csv", { cache: "force-cache" }).then((x) =>
-      x.arrayBuffer(),
+    fetch(`/db/is_condition.${version}.csv`, { cache: "force-cache" }).then(
+      (x) => x.arrayBuffer(),
     ),
-    fetch("/db/is_condition.csv", { cache: "force-cache" }).then((x) =>
-      x.arrayBuffer(),
-    ),
-    fetch("/db/is_symptoms.csv", { cache: "force-cache" }).then((x) =>
-      x.arrayBuffer(),
+    fetch(`/db/is_symptoms.${version}.csv`, { cache: "force-cache" }).then(
+      (x) => x.arrayBuffer(),
     ),
   ]);
   return new Clint.DocDbJs(
