@@ -1,6 +1,6 @@
 # Clint UI
 
-This is the web UI for the [Clint LLM project](https://github.com/clint-llm).
+This is the web UI for the [Clint LLM project](https://github.com/clint-llm/clint-llm.github.io).
 Check out the [live project](https://clint-llm.github.io).
 
 The UI is written in TypeScript and uses React and tailwindcss.
