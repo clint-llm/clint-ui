@@ -232,8 +232,8 @@ function App() {
       <>
         Every message you send makes requests to ChatGPT using your OpenAI
         account. Several thousand tokens to are transmitted to{" "}
-        <code>gpt-3.5-turbo-16k</code>. Your OpenAI account is billed according
-        to <a href="https://openai.com/pricing">OpenAI's Pricing</a>, and each
+        <code>gpt-4o</code>. Your OpenAI account is billed according to{" "}
+        <a href="https://openai.com/pricing">OpenAI's Pricing</a>, and each
         message can cost you a few cents.
       </>,
       "Warning",

@@ -1,7 +1,7 @@
 import * as Clint from "../../clint-lib/pkg";
 
 export async function buildDocDb() {
-  const version = "v2";
+  const version = "v3";
   const [
     embeddings,
     embeddingsPcaMapping,
